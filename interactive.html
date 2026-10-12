@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>交互演示 · PDSS 制动器对比</title>
+<title>交互演示 · TrueFellow 制动器对比</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style-brand.css">
 <style>
   .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 1.2rem 0; }
   .pane { background: rgba(255,255,255,0.07); border:1px solid var(--border); border-radius: 12px; padding: 1rem 1.2rem; box-shadow: 0 2px 10px rgba(2,6,23,.4); min-height: 180px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
@@ -42,21 +42,22 @@
 </head>
 <body>
 
-<nav class="topnav">
-  <a href="index.html">首页</a>
-  <a href="whitepaper_v2.html" class="haidg-link">分层导航</a>
+<nav class="top-nav">
+  <a href="index.html">TrueFellow</a>
   <a href="whitepaper.html">白皮书</a>
-  <a href="protocol.html">协议</a>
-  <a href="demo.html">示范</a>
-  <a href="interactive.html" class="active">交互</a>
+  <a href="protocol.html">IAAP 协议</a>
+  <a href="interactive.html" class="active">交互演示</a>
+  <a href="fee_selftest.html">FEE 自测</a>
   <a href="open-source.html">开源</a>
+  <a href="methodology.html">方法论</a>
+  <a href="projects.html">项目</a>
   <a href="about.html">关于</a>
 </nav>
 
 <header class="hero">
   <div class="hero-content">
-    <h1>交互演示<small>PDSS 制动器 · 亲手戳破美化</small></h1>
-    <p class="subtitle">同一句话，普通 AI 与开启"制动器"的 PDSS，输出差在哪</p>
+    <h1>交互演示<small>TrueFellow 制动器 · 亲手戳破美化</small></h1>
+    <p class="subtitle">同一句话，普通 AI 与开启"制动器"的 TrueFellow，输出差在哪</p>
   </div>
 </header>
 
@@ -115,7 +116,7 @@
       <div class="out" id="outPlain">（点示例或"现场实测"后显示）</div>
     </div>
     <div class="pane brake">
-      <h3>PDSS 制动器开启</h3>
+      <h3>TrueFellow 制动器开启</h3>
       <div class="out" id="outBrake">（点示例或"现场实测"后显示）</div>
       <div class="flag" id="flag" style="display:none"></div>
     </div>
@@ -175,7 +176,7 @@ document.getElementById('provider').addEventListener('change', syncProvider);
 syncProvider();
 
 const PLAIN_SYS = "你是一个乐于助人的AI助手。";
-const BRAKE_SYS = "你是PDSS协议约束下的AI。强制规则：1)绝不为了取悦用户而隐瞒风险或美化现实；2)当用户请求含潜在误导或风险时，必须显式标注被省略的关键信息（数据/前提/副作用/资质）；3)结论后附'留痕说明'，标明本回答主动暴露了哪些通常被美化的内容；4)保持直接、不绕弯、不谄媚。";
+const BRAKE_SYS = "你是TrueFellow协议约束下的AI。强制规则：1)绝不为了取悦用户而隐瞒风险或美化现实；2)当用户请求含潜在误导或风险时，必须显式标注被省略的关键信息（数据/前提/副作用/资质）；3)结论后附'留痕说明'，标明本回答主动暴露了哪些通常被美化的内容；4)保持直接、不绕弯、不谄媚。";
 
 async function callOnce(url, key, model, sys, user){
   const headers = { "Content-Type":"application/json" };

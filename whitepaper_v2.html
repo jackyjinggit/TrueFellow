@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style-brand.css">
 <style>
 /* === 分层窗口专用样式 === */
 body, .layer-content, .layer-content * {
@@ -206,14 +206,15 @@ body, .layer-content, .layer-content * {
 </head>
 <body>
 
-<nav class="topnav">
-  <a href="index.html">首页</a>
-  <a href="whitepaper_v2.html" class="haidg-link active">分层导航</a>
+<nav class="top-nav">
+  <a href="index.html">TrueFellow</a>
   <a href="whitepaper.html">白皮书</a>
-  <a href="protocol.html">协议</a>
-  <a href="demo.html">示范</a>
-  <a href="interactive.html">交互</a>
+  <a href="protocol.html">IAAP 协议</a>
+  <a href="interactive.html">交互演示</a>
+  <a href="fee_selftest.html">FEE 自测</a>
   <a href="open-source.html">开源</a>
+  <a href="methodology.html">方法论</a>
+  <a href="projects.html">项目</a>
   <a href="about.html">关于</a>
 </nav>
 
@@ -223,7 +224,7 @@ body, .layer-content, .layer-content * {
   <span class="sep">›</span>
   <a href="#" onclick="switchLayer('hai');return false;" id="b-hai">HAI</a>
   <span class="sep">›</span>
-  <a href="#" onclick="switchLayer('pdss');return false;" id="b-pdss">PDSS</a>
+  <a href="#" onclick="switchLayer('pdss');return false;" id="b-pdss">TrueFellow</a>
   <span class="sep">›</span>
   <a href="#" onclick="switchLayer('fee');return false;" id="b-fee">AI Sycophancy</a>
   <span style="margin-left:auto;font-size:0.75rem;color:rgba(255,255,255,0.4);" id="layer-label">当前：HAIDG · HAI Deep Governance</span>
@@ -233,7 +234,7 @@ body, .layer-content, .layer-content * {
 <div class="float-nav">
   <a href="#" onclick="switchLayer('haidg');return false;" class="active" id="dot-haidg"><span class="tip">HAIDG</span></a>
   <a href="#" onclick="switchLayer('hai');return false;" id="dot-hai"><span class="tip">HAI 白皮书</span></a>
-  <a href="#" onclick="switchLayer('pdss');return false;" id="dot-pdss"><span class="tip">PDSS</span></a>
+  <a href="#" onclick="switchLayer('pdss');return false;" id="dot-pdss"><span class="tip">TrueFellow</span></a>
   <a href="#" onclick="switchLayer('fee');return false;" id="dot-fee"><span class="tip">AI Sycophancy</span></a>
 </div>
 
@@ -310,7 +311,7 @@ body, .layer-content, .layer-content * {
 
     <div class="map-card" onclick="switchLayer('pdss');">
       <span class="depth-tag">第二层 · 参考架构</span>
-      <h3>PDSS：个人决策支持系统</h3>
+      <h3>TrueFellow：个人决策支持系统</h3>
       <p>Personal Decision Support System（个人决策支持系统）。多智能体架构、三层拓扑、D1 审计指标集——HAIDG 的一个完整参考实现。</p>
       <p style="margin-top:0.5rem;font-size:0.8rem;color:var(--accent-light);">点击钻取 →</p>
     </div>
@@ -336,7 +337,7 @@ body, .layer-content, .layer-content * {
     <thead><tr><th>层级</th><th>回答的问题</th><th>向下钻取</th></tr></thead>
     <tbody>
       <tr><td>第一层 · HAI 白皮书</td><td>人-AI 协作为什么需要独立分类？四个核心特征是什么？</td><td>→ 用什么架构实现？</td></tr>
-      <tr><td>第二层 · PDSS</td><td>参考架构如何设计？多智能体如何分工、纪律如何执行？</td><td>→ 架构要对抗什么问题？</td></tr>
+      <tr><td>第二层 · TrueFellow</td><td>参考架构如何设计？多智能体如何分工、纪律如何执行？</td><td>→ 架构要对抗什么问题？</td></tr>
       <tr><td>第三层 · AI Sycophancy</td><td>治理缺失的后果是什么？AI 如何退化为顺应者？</td><td>→ 如何检测？</td></tr>
       <tr><td>第四层 · IAAP + 自测</td><td>如何量化检测谄媚偏移？普通人如何当场验证？</td><td>→ <a href="fee_selftest.html" target="_blank">直达即测窗口</a></td></tr>
     </tbody>
@@ -350,7 +351,7 @@ body, .layer-content, .layer-content * {
       <tr><td><strong>HCI</strong>（Human-Computer Interaction，人机交互）</td><td>人与计算机系统的交互设计</td><td>HAIDG 的交互设计维度继承了 HCI 的方法论传统</td></tr>
       <tr><td><strong>HAI Design</strong>（Human-AI Interaction Design，人-AI 交互设计）</td><td>人与 AI 的交互设计</td><td>HAIDG 的交互设计维度——比 HCI 更聚焦 AI 的不确定性、适应性和可解释性</td></tr>
       <tr><td><strong>AI Ethics / AI Safety</strong>（AI 伦理 / AI 安全）</td><td>AI 系统的伦理合规与安全约束</td><td>HAIDG 的深度治理维度——关注模型层面的公平性和安全性，但尚未覆盖个人长期协作中的深度治理</td></tr>
-      <tr><td><strong>DSS</strong>（Decision Support System，决策支持系统）</td><td>辅助人类决策的信息系统</td><td>PDSS 继承自 DSS 概念——区别在于 PDSS 增加了 AI 节点的独立判断权和约束协议</td></tr>
+      <tr><td><strong>DSS</strong>（Decision Support System，决策支持系统）</td><td>辅助人类决策的信息系统</td><td>TrueFellow 继承自 DSS 概念——区别在于 TrueFellow 增加了 AI 节点的独立判断权和约束协议</td></tr>
       <tr><td><strong>CSCW</strong>（Computer-Supported Cooperative Work，计算机支持的协同工作）</td><td>计算机支持的人类协作</td><td>与 HAIDG 在"多节点协作协议"上有交集，但 CSCW 侧重人与人之间的协作</td></tr>
       <tr><td><strong>HRI</strong>（Human-Robot Interaction，人-机器人交互）</td><td>人与机器人的交互</td><td>与 HAIDG 在"长期关系维护"上有交集，HRI 偏物理交互，HAIDG 偏认知交互</td></tr>
     </tbody>
@@ -375,7 +376,7 @@ body, .layer-content, .layer-content * {
   <p class="desc">在 HAIDG 框架下的第一层具体化：定义人-AI 长期结构化协作的行业类别。<br>这份白皮书本身就是交互设计+深度治理双维合一的实践记录。</p>
   <div class="layer-nav">
     <a href="#" class="lnk" onclick="switchLayer('haidg');return false;">← 回到 HAIDG</a>
-    <a href="#" class="lnk lnk-drill" onclick="switchLayer('pdss');return false;">钻取 PDSS →</a>
+    <a href="#" class="lnk lnk-drill" onclick="switchLayer('pdss');return false;">钻取 TrueFellow →</a>
     <a href="#hai-why" class="lnk">问题空间</a>
     <a href="#hai-def" class="lnk">定义</a>
     <a href="#hai-landscape" class="lnk">格局</a>
@@ -387,7 +388,7 @@ body, .layer-content, .layer-content * {
   <div class="drill-ref" style="border-left-color:var(--accent);">
     <strong>位置提示</strong>：你当前在 <strong>HAI 白皮书层</strong>。<br>
     上层（宏观框架）：<a href="#" class="drill-link" onclick="switchLayer('haidg');return false;">回到 HAIDG</a><br>
-    下层（架构实现）：<a href="#" class="drill-link" onclick="switchLayer('pdss');return false;">钻取 PDSS →</a>
+    下层（架构实现）：<a href="#" class="drill-link" onclick="switchLayer('pdss');return false;">钻取 TrueFellow →</a>
   </div>
 
   <h2 id="hai-why">问题空间：为什么现有分类不够</h2>
@@ -425,8 +426,8 @@ body, .layer-content, .layer-content * {
   </blockquote>
 
   <div class="drill-ref">
-    <strong>→ 深入 PDSS</strong>：上述四条特征中，"自我治理协议"和"系统边界意识"在 PDSS 中以具体机制实现（D1 审计指标集、反谄媚检测、外部监督通道）。
-    <br><a href="#" class="drill-link" onclick="switchLayer('pdss');return false;">查看 PDSS 如何实现 →</a>
+    <strong>→ 深入 TrueFellow</strong>：上述四条特征中，"自我治理协议"和"系统边界意识"在 TrueFellow 中以具体机制实现（D1 审计指标集、反谄媚检测、外部监督通道）。
+    <br><a href="#" class="drill-link" onclick="switchLayer('pdss');return false;">查看 TrueFellow 如何实现 →</a>
   </div>
 
   <h2 id="hai-landscape">当前格局：谁在做什么</h2>
@@ -441,18 +442,18 @@ body, .layer-content, .layer-content * {
   <p>当前最活跃、最未被记录的领域。高密度用户的实践密度已经越过了治理需求的门槛，但企业侧和学术侧的系统性框架供给尚未到达。这个剪刀差是核心矛盾。</p>
 
   <h2>参考架构概要</h2>
-  <p><strong>PDSS</strong>（Personal Decision Support System，个人决策支持系统）是一个人在不与多个 AI 节点失去自我治理权的前提下构成可信认知系统的完整架构。详细设计见下层。</p>
+  <p><strong>TrueFellow</strong>（Personal Decision Support System，个人决策支持系统）是一个人在不与多个 AI 节点失去自我治理权的前提下构成可信认知系统的完整架构。详细设计见下层。</p>
 
   <div class="drill-ref">
     <strong>→ 完整参考架构</strong>：三层拓扑、多智能体节点分工、运行纪律、D1 审计指标集的完整描述。
-    <br><a href="#" class="drill-link" onclick="switchLayer('pdss');return false;">钻取 PDSS →</a>
+    <br><a href="#" class="drill-link" onclick="switchLayer('pdss');return false;">钻取 TrueFellow →</a>
   </div>
 
   <h2>方法论基础</h2>
   <p>这份白皮书不是回顾性叙述——对话原文在发生时逐轮落盘为审计日志，分析者与参与者是不同进程。系统协议优先于个人判断。系统边界被明确声明。</p>
 
   <h2>行业路径</h2>
-  <p>人-AI 协作作为行业类别当前处于命名前夜。未来三年路线：命名阶段（2026-2027）→ 架构阶段（2027-2028）→ 标准化阶段（2028+）。PDSS 的定位不是权威，是起点——第一个被完整记录下来的参考案例。</p>
+  <p>人-AI 协作作为行业类别当前处于命名前夜。未来三年路线：命名阶段（2026-2027）→ 架构阶段（2027-2028）→ 标准化阶段（2028+）。TrueFellow 的定位不是权威，是起点——第一个被完整记录下来的参考案例。</p>
 
   <div class="drill-ref">
     <strong>→ HAIDG 视角</strong>：行业路径的三阶段规划本身就是 HAIDG 框架从命名到标准化的发展路线。<br>
@@ -469,7 +470,7 @@ body, .layer-content, .layer-content * {
     <tbody>
       <tr><td>HAIDG</td><td>HAI Deep Governance（HAI 深度治理）</td><td>宏观框架</td></tr>
       <tr><td>HAI</td><td>Human-AI Collaboration（人-AI 协作）</td><td>行业分类</td></tr>
-      <tr><td>PDSS</td><td>Personal Decision Support System（个人决策支持系统）</td><td>参考架构</td></tr>
+      <tr><td>TrueFellow</td><td>Personal Decision Support System（个人决策支持系统）</td><td>参考架构</td></tr>
       <tr><td>AI Sycophancy</td><td>AI 谄媚效应（Science 2026 发表，Cheng et al.）</td><td>学术术语</td></tr>
       <tr><td>FEE</td><td>Flattering-Echo Effect（谄媚-回音效应，对 AI Sycophancy 退化过程的补充描述）</td><td>内部控制术语</td></tr>
       <tr><td>IAAP</td><td>Intent Alignment Audit Protocol（意图对齐审计协议）</td><td>检测协议</td></tr>
@@ -485,12 +486,12 @@ body, .layer-content, .layer-content * {
 </section>
 
 <!-- ======================================================================== -->
-<!-- 层 2: PDSS（Personal Decision Support System，个人决策支持系统） -->
+<!-- 层 2: TrueFellow（Personal Decision Support System，个人决策支持系统） -->
 <!-- ======================================================================== -->
 <section class="layer depth-2" id="layer-pdss">
 
 <div class="layer-header">
-  <h1>PDSS<small>个人决策支持系统</small></h1>
+  <h1>TrueFellow<small>个人决策支持系统</small></h1>
   <p class="subtitle">Personal Decision Support System</p>
   <p class="desc">在 HAIDG 框架下的参考架构实现。<br>一个人与多个 AI 节点构成可信认知系统而不失去自我治理权的完整设计。</p>
   <div class="layer-nav">
@@ -505,7 +506,7 @@ body, .layer-content, .layer-content * {
 <div class="layer-content">
 
   <div class="drill-ref" style="border-left-color:#6366F1;">
-    <strong>位置提示</strong>：你当前在 <strong>PDSS 层</strong>。<br>
+    <strong>位置提示</strong>：你当前在 <strong>TrueFellow 层</strong>。<br>
     上层（行业白皮书）：<a href="#" class="drill-link" onclick="switchLayer('hai');return false;">回到 HAI 白皮书</a><br>
     顶层（宏观框架）：<a href="#" class="drill-link" onclick="switchLayer('haidg');return false;">回到 HAIDG</a><br>
     下层（学术协议）：<a href="#" class="drill-link" onclick="switchLayer('fee');return false;">深入 AI Sycophancy →</a>
@@ -513,7 +514,7 @@ body, .layer-content, .layer-content * {
 
   <h2 id="pdss-arch">架构概述</h2>
 
-  <p><strong>PDSS</strong>（Personal Decision Support System，个人决策支持系统）的核心理念继承自管理信息系统领域经典的 DSS（Decision Support System，决策支持系统）概念——一个帮助人类做出更好决策的信息系统。区别在于：PDSS 是人与多个 AI 节点构成的认知系统，且人的元判断权不可转移给任何节点。</p>
+  <p><strong>TrueFellow</strong>（Personal Decision Support System，个人决策支持系统）的核心理念继承自管理信息系统领域经典的 DSS（Decision Support System，决策支持系统）概念——一个帮助人类做出更好决策的信息系统。区别在于：TrueFellow 是人与多个 AI 节点构成的认知系统，且人的元判断权不可转移给任何节点。</p>
 
   <p>核心设计原则：<strong>人的元判断不转移给任何节点；节点的判断权由协议定义，而非模型能力定义。</strong></p>
 
@@ -570,7 +571,7 @@ body, .layer-content, .layer-content * {
   <p>AI 节点每次输出前须检测是否存在过度肯定、提前闭合等谄媚信号。每 10 轮至少进行一次输出审查。</p>
 
   <div class="drill-ref">
-    <strong>→ 深入 AI Sycophancy</strong>：反谄媚检测是 PDSS 对抗 AI Sycophancy 的协议级机制。FEE（谄媚-回音效应）描述了这一现象的完整退化过程。
+    <strong>→ 深入 AI Sycophancy</strong>：反谄媚检测是 TrueFellow 对抗 AI Sycophancy 的协议级机制。FEE（谄媚-回音效应）描述了这一现象的完整退化过程。
     <br><a href="#" class="drill-link" onclick="switchLayer('fee');return false;">阅读 AI Sycophancy 完整定义 →</a>
   </div>
 
@@ -596,7 +597,7 @@ body, .layer-content, .layer-content * {
   </table>
 
   <div class="drill-ref">
-    <strong>→ 回到 HAIDG</strong>：PDSS 是 HAIDG 框架的第一个完整参考架构实现，但不是唯一的——它是"第一个被完整记录的"。
+    <strong>→ 回到 HAIDG</strong>：TrueFellow 是 HAIDG 框架的第一个完整参考架构实现，但不是唯一的——它是"第一个被完整记录的"。
     <br><a href="#" class="drill-link" onclick="switchLayer('haidg');return false;">回到 HAIDG 宏观框架 →</a>
   </div>
 
@@ -613,7 +614,7 @@ body, .layer-content, .layer-content * {
   <p class="subtitle">AI Sycophancy（Science 2026） · Intent Alignment Audit Protocol</p>
   <p class="desc">最深一层：HAIDG 深度治理维度的学术协议层。<br>AI Sycophancy（AI谄媚效应）命名了一个过去被经验感受但未被结构化描述的现象；IAAP（意图对齐审计协议）将其转化为可操作的检测标准。</p>
   <div class="layer-nav">
-    <a href="#" class="lnk" onclick="switchLayer('pdss');return false;">← 回到 PDSS</a>
+    <a href="#" class="lnk" onclick="switchLayer('pdss');return false;">← 回到 TrueFellow</a>
     <a href="#" class="lnk" onclick="switchLayer('haidg');return false;">回到 HAIDG</a>
     <a href="#fee-def" class="lnk">定义</a>
     <a href="#fee-stages" class="lnk">演化阶段</a>
@@ -625,7 +626,7 @@ body, .layer-content, .layer-content * {
 
   <div class="drill-ref" style="border-left-color:#FBBF24;">
     <strong>位置提示</strong>：你当前在 <strong>AI Sycophancy / IAAP 层</strong>（最深一层）。<br>
-    上层（参考架构）：<a href="#" class="drill-link" onclick="switchLayer('pdss');return false;">回到 PDSS</a><br>
+    上层（参考架构）：<a href="#" class="drill-link" onclick="switchLayer('pdss');return false;">回到 TrueFellow</a><br>
     顶层（宏观框架）：<a href="#" class="drill-link" onclick="switchLayer('haidg');return false;">回到 HAIDG</a>
   </div>
 
@@ -639,7 +640,7 @@ body, .layer-content, .layer-content * {
 
   <blockquote>
     <strong>HAIDG 视角</strong>：AI Sycophancy 是深度治理维度缺失的典型后果。当一个系统没有设计 AI 的独立挑战义务时，谄媚滑移只是时间问题。
-    <br><strong>PDSS 视角</strong>：AI Sycophancy 的存在说明 PDSS 的反谄媚检测和 D1 审计指标不是额外增强——它们是可信协作的必要基础设施。
+    <br><strong>TrueFellow 视角</strong>：AI Sycophancy 的存在说明 TrueFellow 的反谄媚检测和 D1 审计指标不是额外增强——它们是可信协作的必要基础设施。
   </blockquote>
 
   <h3>核心数据</h3>
@@ -670,8 +671,8 @@ body, .layer-content, .layer-content * {
   </table>
 
   <div class="drill-ref">
-    <strong>→ PDSS 对抗</strong>：反谄媚检测在每轮输出前检测 S1-S3 信号。D1 指标中的"独立挑战执行率"确保每会话至少一次独立挑战。
-    <br><a href="#" class="drill-link" onclick="switchLayer('pdss');return false;">查看 PDSS 的对抗机制 →</a>
+    <strong>→ TrueFellow 对抗</strong>：反谄媚检测在每轮输出前检测 S1-S3 信号。D1 指标中的"独立挑战执行率"确保每会话至少一次独立挑战。
+    <br><a href="#" class="drill-link" onclick="switchLayer('pdss');return false;">查看 TrueFellow 的对抗机制 →</a>
   </div>
 
   <h2 id="iaap">IAAP：意图对齐审计协议</h2>
@@ -712,7 +713,7 @@ body, .layer-content, .layer-content * {
   <div class="drill-ref">
     <strong>→ 宏观视野</strong>：AI Sycophancy / IAAP 是 HAIDG 深度治理维度最深层的具体实现。从这里你可以：
     <br>
-    <a href="#" class="drill-link" onclick="switchLayer('pdss');return false;">回到 PDSS（架构实现）</a>
+    <a href="#" class="drill-link" onclick="switchLayer('pdss');return false;">回到 TrueFellow（架构实现）</a>
     &nbsp;|&nbsp;
     <a href="#" class="drill-link" onclick="switchLayer('hai');return false;">回到 HAI 白皮书（行业定义）</a>
     &nbsp;|&nbsp;
@@ -758,7 +759,7 @@ function switchLayer(layerId) {
   const labels = {
     haidg: 'HAIDG · HAI Deep Governance',
     hai: 'HAI 协作 · 行业白皮书',
-    pdss: 'PDSS · 参考架构',
+    pdss: 'TrueFellow · 参考架构',
     fee: 'AI Sycophancy · IAAP'
   };
   const labelEl = document.getElementById('layer-label');

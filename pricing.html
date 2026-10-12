@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrueFellow · 服务与档位 — 1 对 1 搭建 + 每月复盘</title>
+<meta name="description" content="TrueFellow 提供的是服务费制的人-AI 协作陪跑：三档结构、每月交付清单、四条红线。价格按档位明码标价，熟人给的是内测资格与陪跑深度，不打折。">
+<link rel="stylesheet" href="style-brand.css">
+<style>
+.price-tag{
+  font:700 30px/1.2 "JetBrains Mono","SF Mono",ui-monospace,monospace;
+  color:var(--accent2); letter-spacing:.02em; margin:2px 0 10px;
+}
+.tier{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; }
+.tier .card{ display:flex; flex-direction:column; }
+.tier .card.reco{ border:1px solid var(--accent); box-shadow:0 0 0 1px rgba(79,195,247,.25), 0 20px 48px -18px rgba(79,195,247,.5); }
+.deliver{ list-style:none; margin:12px 0 0; padding:0; }
+.deliver li{ position:relative; padding-left:18px; font-size:.92em; color:var(--text-dim); margin-bottom:6px; }
+.deliver li::before{ content:"▸"; position:absolute; left:0; color:var(--accent); }
+.redline li::before{ content:"■"; color:var(--warn); }
+.note{ max-width:980px; margin:0 auto 18px; color:var(--text-dim); font-size:.94em; }
+@media (max-width:820px){ .tier{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index.html">TrueFellow</a>
+  <a href="whitepaper.html">白皮书</a>
+  <a href="protocol.html">IAAP 协议</a>
+  <a href="interactive.html">交互演示</a>
+  <a href="fee_selftest.html">FEE 自测</a>
+  <a href="open-source.html">开源</a>
+  <a href="methodology.html">方法论</a>
+  <a href="projects.html">项目</a>
+  <a href="pricing.html" class="active">服务与档位</a>
+  <a href="about.html">关于</a>
+</nav>
+
+<header class="hook">
+  <div class="tag">TRUEFELLOW · SERVICE &amp; TIERS</div>
+  <h1>这是服务，不是软件。</h1>
+  <p class="sub">按月交付、有人在场、可随时打断——不承诺自动效果，也不卖账号给你自己跑。
+  定价按档位明码标价；首批内测给的是<b>资格与陪跑深度</b>，不是价格折扣。</p>
+</header>
+
+<h2>三档结构 <span class="en">THREE TIERS</span></h2>
+<p class="note">价格以占位符呈现，定档后回填；对外统一按档位报价，不因关系调整。</p>
+<div class="grid tier">
+  <div class="card">
+    <h4>档 1 · 陪伴</h4>
+    <div class="price-tag">{{档1}} <span style="font-size:.5em;color:var(--text-dim)">/ 月</span></div>
+    <p style="color:var(--text-dim);font-size:.92em">面向：想「有人一起跑」的人。先把系统装好，每月回来对一次账。</p>
+    <ul class="deliver">
+      <li>人-AI 协作环境 1 对 1 搭建（一次）</li>
+      <li>每月 1 次复盘与调参</li>
+      <li>当月协作记录导出（不依赖平台格式）</li>
+      <li>问题随时留言，复盘时集中处理</li>
+    </ul>
+  </div>
+  <div class="card reco">
+    <h4>档 2 · 陪跑 <span class="status live">主推</span></h4>
+    <div class="price-tag">{{档2}} <span style="font-size:.5em;color:var(--text-dim)">/ 月</span></div>
+    <p style="color:var(--text-dim);font-size:.92em">面向：高净值、要决策支持的人。核心不是工具，是「有人持续在场并对你的判断提出异议」。</p>
+    <ul class="deliver">
+      <li>档 1 全部内容</li>
+      <li>每月 2–3 次深度复盘（含决策回溯）</li>
+      <li>优先响应通道</li>
+      <li>关键决策前的独立反对意见（诤友职责）</li>
+      <li>每月一份可带走的结构化报告</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h4>档 3 · 常驻</h4>
+    <div class="price-tag">{{档3}} <span style="font-size:.5em;color:var(--text-dim)">/ 月（可转季付 / 年付）</span></div>
+    <p style="color:var(--text-dim);font-size:.92em">面向：要「持续在场」的人。专属通道 + 随时打断 + 季度战略对齐。</p>
+    <ul class="deliver">
+      <li>档 2 全部内容</li>
+      <li>专属通道，随时打断</li>
+      <li>季度战略对齐（半天，线上或线下）</li>
+      <li>年度协作资产归档与可迁移性验证</li>
+    </ul>
+  </div>
+</div>
+
+<h2>怎么开始 <span class="en">HOW TO START</span></h2>
+<div class="grid">
+  <div class="card"><h4>① 沟通</h4><p>一次 30–60 分钟的对话：你现在怎么和 AI 协作、卡在哪、想要什么。不收费，不推销。</p></div>
+  <div class="card"><h4>② 诊断</h4><p>给出一份书面诊断：现在的问题属于哪一类、能改的和改不了的分别是哪些。</p></div>
+  <div class="card"><h4>③ 搭建</h4><p>按档位做 1 对 1 环境搭建与规则注入，当场跑通一次真实任务。</p></div>
+  <div class="card"><h4>④ 月度复盘</h4><p>按频次复盘调参，每月一份可带走的结构化报告——这是「服务」与「软件」的分界线。</p></div>
+</div>
+
+<h2>四条红线 <span class="en">RED LINES</span></h2>
+<div class="grid">
+  <div class="card">
+    <h4>边界声明</h4>
+    <ul class="deliver redline">
+      <li>收服务费，不卖软件订阅——不提供「拿走系统自己用」的形态</li>
+      <li>不承诺结果——卖过程与在场，不卖「决策正确率」或收益数字</li>
+      <li>不以体系深度为卖点——只承诺首次交付即可感知</li>
+      <li>不裸奔到公众——达标后再谈开放自助，先合规再上架</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h4>定价口径</h4>
+    <ul class="deliver">
+      <li>按替代方案成本与少走的弯路定价，不按投入小时数折算</li>
+      <li>三档明码标价，熟人给内测资格与陪跑深度，价格不打折</li>
+      <li>不透露任何一位客户的实际成交额</li>
+      <li>暂停与退出机制：服务费制，按月可停（条款以双方约定为准）</li>
+    </ul>
+  </div>
+</div>
+
+<div class="cta-band">
+  <h2>价格由人定，边界不打折。</h2>
+  <p>档位与价格当面确认，不群发、不询价。第一步只是一次对话。</p>
+  <a class="btn" href="about.html">联系与开始 →</a>
+  <a class="btn ghost" href="methodology.html" style="margin-left:10px">先看方法论</a>
+</div>
+
+<footer>
+  <p>© 2026 蒋平 · TrueFellow · <a href="open-source.html">CC BY-NC-SA 4.0</a> · <a href="https://github.com/jackyjinggit" target="_blank" rel="noopener">GitHub 仓库</a></p>
+  <p style="margin-top:6px">页面价格位为占位符，定档后回填；本页所述为服务费制，不构成软件订阅要约。</p>
+</footer>
+
+</body>
+</html>

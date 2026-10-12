@@ -91,6 +91,43 @@
   .switch a{color:var(--whale-bright);text-decoration:none;font-size:14px;border:1px solid var(--line);padding:8px 16px;border-radius:999px;transition:.2s;}
   .switch a:hover{border-color:rgba(91,140,255,.55);box-shadow:var(--glow);}
 </style>
+
+<style>
+/* ===== TrueFellow 同态 overlay · 品牌站 v1.2 锚（2026-10-02） ===== */
+:root{ --card:rgba(125,205,250,.07); }
+body{
+  background:
+    radial-gradient(1100px 620px at 82% -8%, rgba(79,195,247,.22), transparent 62%),
+    radial-gradient(820px 480px at 4% 16%, rgba(255,213,79,.09), transparent 55%),
+    linear-gradient(180deg, #0b1424 0%, #10213c 55%, #0b1626 100%);
+  background-attachment: fixed;
+}
+.hero{ position:relative; isolation:isolate;
+  background:linear-gradient(135deg,#0e1830 0%,#12264a 100%); }
+.hero::before{
+  content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background:
+    radial-gradient(560px 300px at 50% -10%, rgba(79,195,247,.3), transparent 70%),
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px) 0 0/100% 40px,
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px) 0 0/40px 100%;
+  -webkit-mask-image:radial-gradient(ellipse at 50% 0%, #000 30%, transparent 78%);
+  mask-image:radial-gradient(ellipse at 50% 0%, #000 30%, transparent 78%);
+}
+.card, .hero{
+  backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  box-shadow:0 2px 10px rgba(2,6,23,.35);
+}
+.card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(79,195,247,.55);
+  box-shadow:0 14px 36px rgba(2,6,23,.5), 0 0 24px -6px rgba(79,195,247,.35);
+}
+@keyframes fadeUpTF{ from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:translateY(0);} }
+.card{ animation:fadeUpTF .5s ease both; }
+@media (prefers-reduced-motion: reduce){ .card{ animation:none; } .card:hover{ transform:none; } }
+</style>
+
 </head>
 <body>
 
@@ -111,7 +148,7 @@
   <div class="card">
     <h2>一句话定位</h2>
     <div class="oneliner">
-      I build the "handrail" layer on top of any Agent Harness — the cognitive calibration layer that keeps agents from going rogue, harming users, or leaving them stranded. Forged over 18,000+ turns of real conversations, not a spec.
+      I build the "handrail" layer on top of any Agent Harness — the cognitive calibration layer that keeps agents from going rogue, harming users, or leaving them stranded. Forged over 20,000+ turns of real conversations, not a spec.
       <div class="en" style="margin-top:8px">我在任意 Agent Harness 之上构建"扶手层"——那层认知校准，让 agent 不乱来、不伤人、不把人晾在半空。一千多轮真实对话淬炼出来的，不是 PPT。</div>
     </div>
   </div>
@@ -131,7 +168,7 @@
     <h2>轨迹（2026）</h2>
     <ul class="tl">
       <li><span class="d">2026-08</span><span class="x"><b>co-agency-integrity v0.2.0 开源</b> —— 认知免疫工具包：反谄媚 / 认知免疫工具箱，MIT，含国内 TSA（RFC3161）时间戳证据</span></li>
-      <li><span class="d">2026-08</span><span class="x"><b>谗臣效应（FEE）论文更新至 v3.4</b> —— 公开于 OSF（800+ 轮实测）</span></li>
+      <li><span class="d">2026-08</span><span class="x"><b>谗臣效应（FEE）论文</b> —— OSF 公开（800+ 轮实测 + 45 轮跨模型复跑）</span></li>
       <li><span class="d">2026-08</span><span class="x"><b>HAI 人机协作白皮书发布</b>（v1.2 final）</span></li>
       <li><span class="d">2026-07</span><span class="x"><b>知乎专栏「AI协作的认知结构研究」开栏</b> —— 谗臣效应系列首发：不聊 AGI 恐惧，聊"当 AI 越来越会顺着你说，你的判断能力正在悄悄坍缩"</span></li>
       <li><span class="d">2026-06</span><span class="x"><b>提出"扶手层 / 认知校准层"</b>（DSS for Agent Harness）—— 明确长期钻研的生态位</span></li>
@@ -164,7 +201,7 @@
         <div class="u">github.com/jackyjinggit/pdss-life-value-system</div>
       </a>
       <a class="link" href="https://osf.io/6jdhm" target="_blank" rel="noopener">
-        <div class="t">反谗臣（FEE）论文 v3.4（OSF 6jdhm）</div>
+        <div class="t">反谗臣（FEE）论文（OSF 公开）</div>
         <div class="u">osf.io/6jdhm · 800+ 轮实测</div>
       </a>
       <a class="link" href="https://github.com/jackyjinggit/xuanlan-governance-kit" target="_blank" rel="noopener">
@@ -219,7 +256,7 @@
       <span>📖 <a href="https://www.zhihu.com/column/c_2064223181343347973" target="_blank" rel="noopener" style="color:var(--whale-bright);text-decoration:none">知乎专栏</a></span>
       <span>🐦 <a href="https://weibo.com/u/3069897487" target="_blank" rel="noopener" style="color:var(--whale-bright);text-decoration:none">微博</a></span>
     </div>
-    <p class="en" style="margin-top:12px">本页为公开索引，内容脱敏，不含内部节点名与本地路径。对外口径守蒋平裁定：PDSS 对外只称「个人 DSS（Personal Decision Support System）」，不展开内部黑话。</p>
+    <p class="en" style="margin-top:12px">本页为公开索引，内容脱敏，不含内部节点名与本地路径。对外口径守蒋平裁定：TrueFellow 对外只称「个人 DSS（Personal Decision Support System）」，不展开内部黑话。</p>
   </div>
 
   <p class="foot">蒋平 (Jacky Jiang) · 个人 DSS 独立构建者 · 个人展板 / 履历版 · 2026-08-21</p>
